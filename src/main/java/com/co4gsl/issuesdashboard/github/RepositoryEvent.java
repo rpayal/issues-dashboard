@@ -43,7 +43,7 @@ public class RepositoryEvent {
     }
 
     /**
-     * 
+     *
      */
     public enum Type {
         CLOSED("closed"),
