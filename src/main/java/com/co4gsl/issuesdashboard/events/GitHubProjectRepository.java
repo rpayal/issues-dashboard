@@ -5,6 +5,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 /**
  * @author rpayal
  */
-public interface GitHubRepository extends PagingAndSortingRepository<GitHubProject, Long> {
+public interface GitHubProjectRepository extends PagingAndSortingRepository<GitHubProject, Long> {
     GitHubProject findByRepoName(String repoName);
 }
