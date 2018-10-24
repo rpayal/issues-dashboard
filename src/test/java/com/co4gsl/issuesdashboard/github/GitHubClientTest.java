@@ -40,6 +40,7 @@ public class GitHubClientTest {
                 .expect(requestTo("https://api.github.com/repos/spring-projects/spring-boot/issues/events"))
                 .andRespond(withSuccess(new ClassPathResource("events.json", getClass()), MediaType.APPLICATION_JSON)
                         .headers(responseHeaders));
+
         ResponseEntity<RepositoryEvent[]> responseEntity = this.gitHubClient.fetchEvents("spring-projects", "spring-boot");
         List<RepositoryEvent> repositoryEvents = Arrays.asList(responseEntity.getBody());
         assertThat(repositoryEvents).hasSize(1);
