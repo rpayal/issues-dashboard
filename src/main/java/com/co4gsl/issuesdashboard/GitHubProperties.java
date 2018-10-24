@@ -8,7 +8,7 @@ import javax.validation.constraints.Pattern;
 /**
  * Since the GitHub API is rate-limited, we should create a `GithubProperties` properties class
  * bound to the "github" configuration namespace.
- * 
+ *
  * Use that property in a RestTemplate interceptor to add an authentication request header to each
  * request.
  */
