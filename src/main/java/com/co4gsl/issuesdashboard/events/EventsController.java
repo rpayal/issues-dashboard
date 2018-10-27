@@ -3,6 +3,7 @@ package com.co4gsl.issuesdashboard.events;
 import com.co4gsl.issuesdashboard.github.GitHubClient;
 import com.co4gsl.issuesdashboard.github.RepositoryEvent;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+@Controller
 public class EventsController {
 
     private final GitHubClient gitHubClient;
