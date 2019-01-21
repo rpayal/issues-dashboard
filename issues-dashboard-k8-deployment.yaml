@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: issues-dashboard
+  labels:
+    app: issues-dashboard
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: issues-dashboard
+  template:
+    metadata:
+      labels:
+        app: issues-dashboard
+    spec:
+      containers:
+      - name: issues-dashboard
+        image: rpayal/issues-dashboard:0.0.1-SNAPSHOT
+        ports:
+        - name: http-server
+          containerPort: 8080

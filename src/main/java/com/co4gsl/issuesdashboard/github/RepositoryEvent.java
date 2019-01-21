@@ -67,6 +67,8 @@ public class RepositoryEvent {
         CONVERTED_NOTE_TO_ISSUE("converted_note_to_issue"),
         MOVED_COLUMNS_IN_PROJECT("moved_columns_in_project"),
         COMMENT_DELETED("comment_deleted"),
+        BASE_REF_FORCE_PUSHED("base_ref_force_pushed"),
+        UNKNOWN_EVENT_TYPE("Unknown_Event_Type"),
         REVIEW_REQUESTED("review_requested");
 
         private String type;
@@ -81,8 +83,11 @@ public class RepositoryEvent {
                     return value;
                 }
             }
+            return UNKNOWN_EVENT_TYPE;
+/*
             throw new IllegalArgumentException(
                     "'" + type + "' is not a valid event type");
+*/
         }
     }
 }
