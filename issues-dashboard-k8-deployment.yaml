@@ -17,6 +17,7 @@ spec:
       containers:
       - name: issues-dashboard
         image: rpayal/issues-dashboard:0.0.1-SNAPSHOT
+        imagePullPolicy: Always
         ports:
         - name: http-server
           containerPort: 8080
